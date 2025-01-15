@@ -23,7 +23,6 @@ public class Fibonacci {
 			n2=sum;
 			System.out.print(sum+" ");
 		}
-		System.out.println(sum);
 	}
 
 }

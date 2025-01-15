@@ -12,7 +12,7 @@ public class PrimeNumber {
 		int count=0;
 		if(num>1) {
 			
-			for(int i=1;i<num;i++) {
+			for(int i=1;i<=num;i++) {
 				if(num%i==0)
 					count++;
 		}
