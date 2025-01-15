@@ -1,29 +1,39 @@
 package Array;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class MissingNumberArray {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		
-		int[] arr= {16,3,20,8,9,11};
-		int m=Integer.MIN_VALUE;
+		int[] nums= {4,7,8,9,13};
+		int n=14;
 		
-		for(int i:arr) {
-			if(i>m) {
-				m=i;
-			}
+		findMissingNumbers(nums,n);
+		
+	}
+	
+	public static void findMissingNumbers(int[] nums, int n) {
+		
+		Set<Integer> numSet=new HashSet<Integer>();
+		for(int num:nums) {
+			numSet.add(num);
 		}
-		int[] temp=new int[m];
-		for(int j:arr) {
-			temp[j-1]=1;
-		}
-		for(int j=0;j<temp.length;j++) {
-			if(temp[j]==0) {
-				System.out.print(j+1+" ");
+		
+		List<Integer> missingNumbers=new ArrayList<Integer>();
+		
+		for(int i=1;i<=n;i++) {
+			
+			if(!numSet.contains(i)) {
+				missingNumbers.add(i);
 			}
 			
 		}
+		System.out.print("Missing numbers are : "+missingNumbers);
+		
 	}
 
 }
