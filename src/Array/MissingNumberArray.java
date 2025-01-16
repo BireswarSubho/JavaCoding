@@ -18,22 +18,20 @@ public class MissingNumberArray {
 	
 	public static void findMissingNumbers(int[] nums, int n) {
 		
-		Set<Integer> numSet=new HashSet<Integer>();
+Set<Integer> numSet=new HashSet<Integer>();
+		
 		for(int num:nums) {
 			numSet.add(num);
 		}
 		
-		List<Integer> missingNumbers=new ArrayList<Integer>();
-		
+		List<Integer> missNumber=new ArrayList<Integer>();
 		for(int i=1;i<=n;i++) {
-			
 			if(!numSet.contains(i)) {
-				missingNumbers.add(i);
+				missNumber.add(i);
 			}
-			
 		}
-		System.out.print("Missing numbers are : "+missingNumbers);
-		
+		System.out.println("Missing numbers are : "+missNumber);
+		System.out.println("Second missing number is :"+missNumber.get(2));
 	}
 
 }

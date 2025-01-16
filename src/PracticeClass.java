@@ -12,24 +12,31 @@ public class PracticeClass {
 
 	public static void main(String[] args) {
 		
-		int[] numbers= {5,8,3};
-		int min=numbers[0];
-		int max=numbers[0];
-		for(int number:numbers) {
-			if(number<min) {
-				min=number;
+		int[] nums= {5,4,7,9,8,2,3,1};
+		int l=0;
+		int r=nums.length-1;
+		while(l<r) {
+			while(nums[l]%2==0 && l<r)
+			{
+				l++;
 			}
-			else if(number>max) {
-				max=number;
+			while(nums[r]%2==1 && l<r)
+			{
+				r--;
+			}
+			if(l<r) {
+				int temp=nums[l];
+				nums[l]=nums[r];
+				nums[r]=temp;
 			}
 		}
 		
-		System.out.println("Min value is : "+min);
-		System.out.println("Max value is : "+max);
+		for(int i=0;i<nums.length;i++) {
+			System.out.print(nums[i]+" ");
+		}
 		
 	}
 	
-
 }
 
 
