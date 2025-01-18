@@ -12,31 +12,28 @@ public class PracticeClass {
 
 	public static void main(String[] args) {
 		
-		int[] nums= {5,4,7,9,8,2,3,1};
-		int l=0;
-		int r=nums.length-1;
-		while(l<r) {
-			while(nums[l]%2==0 && l<r)
-			{
-				l++;
-			}
-			while(nums[r]%2==1 && l<r)
-			{
-				r--;
-			}
-			if(l<r) {
-				int temp=nums[l];
-				nums[l]=nums[r];
-				nums[r]=temp;
-			}
-		}
-		
-		for(int i=0;i<nums.length;i++) {
-			System.out.print(nums[i]+" ");
-		}
+		String str = "This is a test string";
+        System.out.println("Original String: " + str);
+        String[] words=str.split(" ");
+       if(words.length<2) {
+    	   System.out.println(str);
+       }
+       for(int i=0;i<words.length;i++) {
+    	   
+    	   StringBuilder sb=new StringBuilder();
+    	   
+    	   if(i!=words.length-2) {
+    		   sb.append(words[i]).append(" ");
+    		   
+    	   }
+    	   System.out.print(sb);
+       }
+       
+       
 		
 	}
 	
+	 
 }
 
 
